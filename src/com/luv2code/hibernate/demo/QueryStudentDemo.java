@@ -41,7 +41,17 @@ public class QueryStudentDemo {
                     .getResultList();
 
             // display the students
-            for(Student student: theStudents2){
+            for (Student student : theStudents2) {
+                System.out.println(student);
+            }
+
+            // query students where email like 'luv2code.com'
+            List<Student> theStudents3 = session.
+                    createQuery("from Student s where s.email like 'luv2code.com'")
+                    .getResultList();
+
+            // display the students
+            for (Student student : theStudents3) {
                 System.out.println(student);
             }
 
