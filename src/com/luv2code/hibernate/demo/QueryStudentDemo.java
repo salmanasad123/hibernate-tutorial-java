@@ -47,7 +47,7 @@ public class QueryStudentDemo {
 
             // query students where email like 'luv2code.com'
             List<Student> theStudents3 = session.
-                    createQuery("from Student s where s.email like 'luv2code.com'")
+                    createQuery("from Student s where s.email like '%luv2code.com'")
                     .getResultList();
 
             // display the students
