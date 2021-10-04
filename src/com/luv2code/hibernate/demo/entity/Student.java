@@ -1,14 +1,13 @@
 package com.luv2code.hibernate.demo.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 // to map the class to database table we use @Entity annotation
 @Entity
 public class Student {
-
+    
     @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int Id;
 
